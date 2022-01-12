@@ -1,0 +1,30 @@
+.footer-cont{
+    width: 100%;
+    background: #242F3E;
+    margin: auto;
+    border-bottom: rgba(175, 175, 175, 0.2) 1px solid;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background: #242F3E;
+    font-size: 14px;
+    color: white;
+    width: 80%;
+    margin: auto;
+}
+
+.footer-col{
+    text-align: left;
+    padding: 50px;
+}
+
+.subtitle{
+    font-weight: 700;
+    padding: 10px 0;
+}
+
+p{
+    padding: 5px 0;
+}

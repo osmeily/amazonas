@@ -1,0 +1,21 @@
+.navbar2{
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    height: 40px;
+    background-color:#242F3E ;
+    color: white;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    gap: 4px;
+}
+
+.item{
+    cursor: pointer;
+}

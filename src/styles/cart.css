@@ -1,0 +1,31 @@
+.cart{
+    background: rgb(232, 231, 231);
+}
+
+.cart-cont{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.shopping-cart{
+    background: white;
+    padding: 18px;
+}
+
+.sub-total{
+    background: white;
+    padding: 18px;
+}
+
+.pay-btn{
+    border: 2px solid #ffc32b;
+    background: #ffc93f;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px 50px;
+    font-weight: 700;
+    cursor: pointer;
+    width: max-content;
+}

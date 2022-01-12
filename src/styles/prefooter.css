@@ -1,0 +1,33 @@
+.prefooter{
+    text-align: center;
+    font-size: 12px;
+}
+
+.id-btn{
+    border: 2px solid #ffc020;
+    background: #ffc93f;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 0px 80px;
+    padding-bottom: 5px;
+    font-weight: 700;
+    border-top: 10px solid #ffd773e2 ;
+    cursor: pointer;
+}
+
+.link-cont{
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+    font-size: 10px;
+    justify-content: center;
+}
+
+.register-link{
+    text-decoration: none;
+    color: royalblue;
+}
+
+.register-link:hover{
+    color: rgb(220, 84, 84);
+}

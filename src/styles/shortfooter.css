@@ -1,0 +1,26 @@
+.short-cont{
+    font-size: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.cont1{
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: royalblue;
+}
+
+a:hover{
+    color: rgb(197, 85, 60);
+}
+
+.cont2{
+    color: gray;
+    padding: 8px;
+}

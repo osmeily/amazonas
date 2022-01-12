@@ -1,0 +1,115 @@
+.navBar{
+    display: flex;
+    height: 64px;
+    background-color:#131921 ;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.logo:hover{
+    outline: 1px solid white;
+}
+
+.gps-container:hover{
+    outline: 1px solid white;
+}
+
+.gps-container{
+    cursor: pointer;
+}
+
+.hola{
+    padding-left: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+
+.gps{
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.drop-search{
+    display: flex;
+    background: white;
+    height: 40px;
+    width: max-content;
+    border-radius: 10px;
+}
+
+.search{
+    background: none;
+    height: 40px;
+    min-width: 400px;
+    border: none;
+    margin: auto;
+}
+
+.cuenta-lista-container{
+    display: flex;
+}
+
+.cuenta-container{
+    cursor: pointer;
+}
+
+.cuenta-container:hover{
+    outline: 1px solid white;
+}
+
+.cuenta-listas{
+    font-weight: 500;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.hola-id{
+    font-size: 12px;
+    padding: 5px;
+}
+
+.devoluciones{
+    font-size: 12px;
+    padding: 5px;
+}
+
+.pedidos{
+    font-weight: 500;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.pedidos-container:hover{
+    outline: 1px solid white;
+}
+
+.pedidos-container{
+    cursor: pointer;
+}
+
+.cart-container{
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+}
+
+.cart-container:hover{
+    outline: 1px solid white;
+}
+
+.cart-text{
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px;
+    padding-right: 8px;
+}

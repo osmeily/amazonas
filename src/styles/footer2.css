@@ -1,0 +1,11 @@
+.all{
+    width: 100%;
+    background: #242F3E;
+}
+
+.logo2{
+    padding: 15px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+
+.up-btn{
+    outline: none;
+    border: 0; 
+    width: 100%;
+    background: #263549dc;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+}
+
+.up-btn:hover{
+    background: #263549d3;
+}
