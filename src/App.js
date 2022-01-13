@@ -4,6 +4,7 @@ import LoginForm from "./components/login/LoginForm";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import RegisterForm from "./components/register/RegisterForm";
 import Cart from "./components/cart/Cart";
+import PaymentPage from "./components/cart/PaymentPage";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/login" element={<LoginForm/>}/>
           <Route path="/register" element={<RegisterForm/>}/>
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/pago" element={<PaymentPage/>}/>
         </Routes>
       </BrowserRouter>
       

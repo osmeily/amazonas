@@ -16,7 +16,7 @@ const NavBar = () => {
     const navigate = useNavigate()
 
     return (
-        <header className='navBar' id='home'>
+        <header className='navBar' id='up'>
             <Logo />
             <div className='gps-container'>
                 <p className='hola'>Hola</p>

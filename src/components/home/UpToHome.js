@@ -8,7 +8,7 @@ const UpToHome = () => {
 
     return (
         <div className='up'>
-            <a href='#home'>
+            <a href='#up'>
             <button className='up-btn'>Inicio de página</button>
 
             </a>

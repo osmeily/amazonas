@@ -8,8 +8,12 @@ import PreFooter from '../home/PreFooter'
 import UpToHome from '../home/UpToHome'
 import CartCard from './CartCard'
 import '../../styles/cart.css'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
+
+    const navigate= useNavigate()
+
     return (
         <div className='cart'>
             <NavBar/>
@@ -21,7 +25,7 @@ const Cart = () => {
                 </div>
                 <div className='sub-total'>
                 <p>Subtotal(1 producto): <span><b>5000$</b></span></p>
-                <button type='button' className='pay-btn'>Proceder al pago</button>
+                <button type='button' onClick={()=> navigate("/pago")} className='pay-btn'>Proceder al pago</button>
                 </div>
             </div>
 
