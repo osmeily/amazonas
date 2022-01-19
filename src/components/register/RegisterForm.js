@@ -4,7 +4,7 @@ import '../../styles/registerform.css'
 import { Link, useNavigate } from 'react-router-dom'
 import ShortFooter from '../login/ShortFooter'
 import { useDispatch } from 'react-redux'
-import { actionRegister } from '../../actions/actionRegister'
+import { actionRegister, actionRegisterAsync } from '../../actions/actionRegister'
 
 const RegisterForm = () => {
 
@@ -30,7 +30,7 @@ const RegisterForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(name, email, pass)
-        dispatch(actionRegister(name, email, pass))
+        dispatch(actionRegisterAsync(email, pass, name))
     }
 
     return (

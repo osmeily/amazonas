@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductSidebar = () => {
+const imageHover = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const ProductSidebar = () => {
     )
 }
 
-export default ProductSidebar
+export default imageHover

@@ -6,7 +6,7 @@ const DropDown = ({selected, setSelected}) => {
 
 const [isActive, setIsActive] = useState(false)
 
-const options = ['Computadoras', 'Moda de niños', 'Arte y artesanías', 'Electrónicos', 'Belleza y cosméticos', 'Hogar', 'Equipaje', 'Bebés', 'Deportes', 'Libros', 'Juguetes', 'Cuidado personal', 'Aire libre', 'Videojuegos']
+const options = ['Computadoras', 'Moda de niños', 'Arte y artesanías', 'Belleza y cuidado personal', 'Hogar', 'Bebés', 'Deportes', 'Libros', 'Juguetes', 'Aire libre', 'Videojuegos']
 
     return (
     <div className='dropdown'>
