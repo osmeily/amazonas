@@ -1,12 +1,16 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import logo from "../../resources/logo-amazon (1).png"
 import visa from '../../resources/visa.png'
 import "../../styles/paymentpage.css"
 
 const PaymentPage = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div>
-            <img className="amazon" src={logo} alt=""/>
+            <img onClick={()=> navigate("/")} className="amazon" src={logo} alt=""/>
         <div className='payment-cont'>
             <div className='card-info'>
                 <h3>Información de tarjeta</h3>
@@ -37,7 +41,7 @@ const PaymentPage = () => {
                 <input className='aloneInput' type="email" placeholder="Correo"/>
                 <input className='aloneInput' type="number" placeholder="Número telefónico"/>
             </div>
-            <button className='pay-btn'>Pago</button>
+            <button  className='pay'>Pago</button>
         </div>
         </div>
     )

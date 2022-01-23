@@ -30,11 +30,13 @@ const NavBar = ({user}) => {
     const dispatch = useDispatch()
 
     const [selected, setSelected] = useState("Todo")
+    const [isLogout, setIsLogout] = useState(false);
 
     const navigate = useNavigate()
 
     const handleLogout = () => {
         dispatch(actionLogoutAsync())
+        isLogout()
     }
 
     let url = '';
@@ -43,10 +45,11 @@ const NavBar = ({user}) => {
     
         useEffect(() => {
         getCoordenadas();
-        },)
+        setIsLogout(true)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        },[])
 
     const getCoordenadas = () => {
-        //watchPosition
         navigator.geolocation.getCurrentPosition(position => {
         const { latitude, longitude } = position.coords;
         url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=AIzaSyDvS3_rBwM7RJYjDOnPzquTpJVlskDs7nI';
@@ -69,13 +72,15 @@ const NavBar = ({user}) => {
                 <p className='hola'>Hola</p>
                 <div className='gps'>
                     <img src={gps} alt=""/>
-                    <p>{ubicacion}</p>
+                    {
+                        ubicacion ? <p>{ubicacion}</p> : <p>Elige tu ubicación</p>
+                    }
                 </div>
             </div>
             <form onSubmit={formik.handleSubmit} className='drop-search'>
                 <DropDown selected={selected} setSelected={setSelected}/>
                 <input onChange={formik.handleChange} className='search' name='search'/>
-                <button type='submit'><img src={buscar} alt=""/></button>
+                <button className='search-btn' type='submit'><img src={buscar} alt=""/></button>
             </form>
             <div className='cuenta-container' onClick={() => navigate("/login")}>
                 <p className='hola-id' >Hola, {user ? user : "identifícate"}</p>
@@ -92,10 +97,10 @@ const NavBar = ({user}) => {
                 <img src={cart} alt=""/>
                 <p className='cart-text'>Carrito</p>
             </div>
-            {user ? <div>
+            {user ? 
+            <div className='logout-div'>
                 <button className='logout' onClick={()=> handleLogout()}>Logout</button>
             </div> : ""}
-            
         </header>
     )
 }
