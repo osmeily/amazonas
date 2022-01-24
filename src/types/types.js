@@ -4,7 +4,8 @@ const types = {
     register : "register",
     listProducts : "listProducts",
     search : "search",
-    addProducts : "addProducts"
+    addProducts : "addProducts",
+    cart : "cart"
 }
 
 export default types

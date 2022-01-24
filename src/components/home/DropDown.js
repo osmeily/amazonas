@@ -11,7 +11,7 @@ const options = ['Computadoras', 'Moda de niños', 'Arte y artesanías', 'Bellez
     return (
     <div className='dropdown'>
         <div className='dropdown-btn' onClick={(e)=> setIsActive(!isActive)}> {selected}
-        <i class="fa-solid fa-caret-down"></i>
+        <i className="fa-solid fa-caret-down"></i>
         </div>
         {isActive && (
             <div className='dropdown-content'>

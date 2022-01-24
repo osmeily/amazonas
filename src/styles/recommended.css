@@ -1,0 +1,29 @@
+.productsRecommended-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
+    background-color: rgb(238, 238, 238);
+    justify-items: center;
+    overflow: auto;
+}
+
+.card-productReco{
+    width: 250px;
+    padding: 10px;
+    height: 250px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    position: relative;
+}
+
+
+.product-nameReco {
+    background-color: rgb(255, 255, 255);
+    z-index: 11;
+    position: absolute;
+    bottom: 0;
+}

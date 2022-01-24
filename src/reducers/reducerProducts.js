@@ -1,7 +1,7 @@
 import types from "../types/types"
 
 const initialState = {
-    products:[]
+    products:[],
 }
 
 export const reducerProducts = (state = initialState, action) => {

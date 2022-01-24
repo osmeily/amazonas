@@ -53,7 +53,6 @@ const NavBar = ({user}) => {
         navigator.geolocation.getCurrentPosition(position => {
         const { latitude, longitude } = position.coords;
         url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + latitude + ',' + longitude + '&key=AIzaSyDvS3_rBwM7RJYjDOnPzquTpJVlskDs7nI';
-        console.log(latitude,longitude)
         getUbicacion(url);
     });
     }
@@ -61,7 +60,6 @@ const NavBar = ({user}) => {
     const getUbicacion = async(endpoint) => {
         const resp = await fetch(endpoint);
         const {results} = await resp.json();
-        console.log(results[8])
         setUbicacion(results[8].formatted_address)
         }
 
@@ -86,7 +84,7 @@ const NavBar = ({user}) => {
                 <p className='hola-id' >Hola, {user ? user : "identifícate"}</p>
                 <div className='cuenta-lista-container'>
                     <p className='cuenta-listas'>Cuenta y Listas</p>
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i className="fa-solid fa-caret-down"></i>
                 </div>
             </div>
             <div className='pedidos-container'>

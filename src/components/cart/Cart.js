@@ -9,10 +9,13 @@ import UpToHome from '../home/UpToHome'
 import CartCard from './CartCard'
 import '../../styles/cart.css'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
-const Cart = () => {
+const Cart = ({products}) => {
 
     const navigate= useNavigate()
+
+    const cartState = useSelector(cart => cart.cart)
 
     return (
         <div className='cart'>
@@ -21,15 +24,13 @@ const Cart = () => {
             <div className='cart-cont'>
                 <div className='shopping-cart'>
                     <h2>Carrito</h2>
-                    <CartCard/>
+                    <CartCard products={products}/>
                 </div>
                 <div className='sub-total'>
                 <p>Subtotal(1 producto): <span><b>5000$</b></span></p>
                 <button type='button' onClick={()=> navigate("/pago")} className='pay-btn'>Proceder al pago</button>
                 </div>
             </div>
-
-
             <PreFooter/>
             <UpToHome/>
             <Footer/>

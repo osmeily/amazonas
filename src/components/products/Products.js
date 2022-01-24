@@ -10,6 +10,7 @@ import beauty from "../../resources/belleza.jpg"
 import More from './More'
 
 const Products = ({products}) => {
+
     return (
         <div>
             <div className='card-cont'>

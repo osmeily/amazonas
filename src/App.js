@@ -9,6 +9,7 @@ import { PrivateRoutes } from "./routers/PrivateRoutes";
 import { useEffect, useState } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Detail from "./components/product/Detail";
+import { useSelector } from "react-redux";
 
 function App() {
 
@@ -28,6 +29,9 @@ function App() {
       setCheckIn(false)
     })
   }, [isLogedIn, checkIn])
+  
+  const {products} = useSelector(store => store.products)
+
 
   if(checkIn){
     return(
@@ -35,11 +39,12 @@ function App() {
     )
   }
   
+  
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage user={user}/>}/>
+          <Route path="/" element={<LandingPage user={user} products={products}/>}/>
           <Route path="/login" element={<PublicRoutes isAuthenticate={isLogedIn}>
             <LoginForm/>
           </PublicRoutes>}/>
@@ -48,12 +53,10 @@ function App() {
             <RegisterForm/>
           </PublicRoutes>}/>
 
-          <Route path="/detalle" element={<PublicRoutes isAuthenticate={isLogedIn}>
-            <Detail/>
-          </PublicRoutes>}/>
+          <Route path="/detalle" element={<Detail products={products}/>}/>
 
           <Route path="/*" element={<PrivateRoutes isAuthenticate={isLogedIn}>
-            <DashboardRoutes/>
+            <DashboardRoutes products={products}/>
           </PrivateRoutes>}/>
 
         </Routes>

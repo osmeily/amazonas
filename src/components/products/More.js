@@ -12,27 +12,30 @@ const More = ({products}) => {
     const handleRender = () => {
         setRender(true)
     }
-    console.log(products)
 
     const handleUid = (product)=> {
-        console.log(product)
         localStorage.setItem("detail", JSON.stringify(product))
         navigate("/detalle")
     }
 
     return (
         <div>
-            <div>
+            {
+                !render ?  <div>
                 <button onClick={()=>handleRender()} className='more-btn'>Ver todos los resultados</button>
-            </div>
+            </div> : ''
+            }
+            <div className='products-cont'>
             {render ? products.map(product=>(
-                <div className='products'>
-                    <div onClick={()=> handleUid(product)} className='card' id={product.docId}>
-                    <p>{product.docData.productName}</p>
+                <div key={product.docId} className='products'>
+                    <div onClick={()=> handleUid(product)} className='card-product' id={product.docId}>
                     <img src={product.docData.imgUrl} alt=""/>
+                    <p className='product-name'>{product.docData.productName}</p>
                     </div>
                 </div>
             )) : ""}
+            </div>
+            
         </div>
     )
 }

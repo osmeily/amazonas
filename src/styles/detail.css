@@ -1,0 +1,91 @@
+.detail-card{
+    display: grid;
+    gap: 20px;
+    padding: 20px 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "mini-pic big-pic info-name add-carti"
+    "mini-pic big-pic info-price add-carti"
+    "mini-pic big-pic about add-carti"
+    "mini-pic big-pic info-description add-carti"
+    ;
+}
+
+.about{
+    grid-area: about;
+    font-weight: 600;
+    padding-bottom: 0px;
+}
+
+.mini-pic{
+    width: 100px ;
+    display: flex;
+    flex-direction: column;
+    grid-area: mini-pic;
+}
+
+.mini-pic > img{
+    width: 80px;
+}
+
+.mini-pic > img:hover{
+    transform: scale(0.9);
+    box-shadow: 1px 1px 10px #eb973d;
+}
+
+.big-pic {
+    grid-area: big-pic;
+    width: 450px;
+    max-height: 500px;
+}
+
+.info-description{
+    grid-area: info-description;
+    width: 450px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.info-name {
+    grid-area: info-name;
+    font-size: 20px;
+}
+
+.info-price{
+    grid-area: info-price;
+    font-size: 20px;
+    color: #AF2913;
+}
+
+.add-carti{
+    grid-area: add-carti;
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    padding: 20px 20px;
+    border: 1px #919696 solid;
+    height: fit-content;
+    margin-top: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.carti-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0AD64;
+    border: 1px solid #eb973d;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.carti-btn > img {
+    width: 30px;
+    background-color: #565959;
+}

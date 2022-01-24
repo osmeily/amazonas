@@ -23,6 +23,7 @@ export const addProducts = (product) => {
     }
 }
 
+
 export const addProductsAsync = (productObject) => {
     return (dispatch)=> {
         addDoc(collection(db, "amazonas-products"), productObject)
@@ -54,7 +55,6 @@ export const listProductsAsync = () => {
                     ...newObject
                 })
         })
-        console.log(productsArray)
         dispatch(listProducts(productsArray))
     }
 }

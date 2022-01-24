@@ -6,19 +6,17 @@ import Footer2 from './Footer2'
 import UpToHome from './UpToHome'
 import PreFooter from './PreFooter'
 import Slider from './Slider'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { listProductsAsync } from '../../actions/actionProducts'
 import Products from '../products/Products'
 
-const LandingPage = ({user}) => {
-
-    const {products} = useSelector(store => store.products)
-    console.log(products)
+const LandingPage = ({user, products}) => {
 
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(listProductsAsync())
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
