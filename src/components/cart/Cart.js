@@ -14,28 +14,38 @@ import { useSelector } from 'react-redux'
 const Cart = ({products}) => {
 
     const navigate= useNavigate()
-
     const cartState = useSelector(cart => cart.cart)
-
+    console.log(cartState.cart[0]);
+    const docId = []
+    const getDocId = products.map(product => docId.push(product.docId))
+    console.log(docId);
+    
     return (
-        <div className='cart'>
-            <NavBar/>
-            <NavBar2/>
-            <div className='cart-cont'>
-                <div className='shopping-cart'>
-                    <h2>Carrito</h2>
-                    <CartCard products={products}/>
+
+        docId.includes(cartState.cart[0]) &&
+        
+            <div className='cart'>
+                <NavBar/>
+                <NavBar2/>
+                <div className='cart-cont'>
+                    {
+                        docId.includes(cartState.cart[0]) ? <div id={products.docId} className='shopping-cart'>
+                        <h2>Carrito</h2>
+                        <CartCard key={products.docId} products={products}/>
+                        </div> : ''
+                    }
+                    <div className='sub-total'>
+                    <p>Subtotal(1 Producto): <span><b>US$</b></span></p>
+                    <button type='button' onClick={()=> navigate("/pago")} className='pay-btn'>Proceder al pago</button>
+                    </div>
                 </div>
-                <div className='sub-total'>
-                <p>Subtotal(1 producto): <span><b>5000$</b></span></p>
-                <button type='button' onClick={()=> navigate("/pago")} className='pay-btn'>Proceder al pago</button>
-                </div>
+                <PreFooter/>
+                <UpToHome/>
+                <Footer/>
+                <Footer2/>
             </div>
-            <PreFooter/>
-            <UpToHome/>
-            <Footer/>
-            <Footer2/>
-        </div>
+
+        
     )
 }
 

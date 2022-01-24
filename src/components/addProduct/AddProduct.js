@@ -114,13 +114,13 @@ const AddProduct = () => {
             <form className='form-add' onSubmit={formik.handleSubmit}>
                 <p className='steps'><img style={{width:"80px"}} src={paso1} alt=''/> Agrega todas las imágenes, empezando por la que mostrarás en lista</p>
                 <div className='image'>
-                    <input name="imgUrl" id='imgUrl' style={{display:"none"}} type='button' onChange={handleFileChangeimgUrl}/>
+                    <input name="imgUrl" id='imgUrl' style={{display:"none"}} type='file' onChange={handleFileChangeimgUrl} required/>
                     <button onClick={handleClickImgUrl}>Imagen card</button>
-                    <input name="imagen1" id='imagen1' style={{display:"none"}} type='button' onChange={handleFileChange1}/>
+                    <input name="imagen1" id='imagen1' style={{display:"none"}} type='file' onChange={handleFileChange1} required/>
                     <button onClick={handleClickPic1}>Imagen 1</button>
-                    <input  name="imagen2" id='imagen2' style={{display:"none"}} type="button" onChange={handleFileChange2}/>
+                    <input  name="imagen2" id='imagen2' style={{display:"none"}} type="file" onChange={handleFileChange2} required/>
                     <button onClick={handleClickPic2}>Imagen 2</button>
-                    <input  name="imagen3" id='imagen3' style={{display:"none"}} type="button" onChange={handleFileChange3}/>
+                    <input  name="imagen3" id='imagen3' style={{display:"none"}} type="file" onChange={handleFileChange3} required/>
                     <button onClick={handleClickPic3}>Imagen 3</button>
                 </div>
                 <hr/>
@@ -128,19 +128,19 @@ const AddProduct = () => {
                 <div className='input-info'>
                     <div>
                         <label>Nombre del producto :</label>
-                        <input name='productName' onChange={formik.handleChange}/>
+                        <input name='productName' onChange={formik.handleChange} required/>
                     </div>
                     <div>
                         <label>Categoría :</label>
-                        <input name='category' onChange={formik.handleChange} />
+                        <input name='category' onChange={formik.handleChange} required/>
                     </div>
                     <div>
                         <label>Descripción del producto :</label>
-                        <input name='productDetail' onChange={formik.handleChange}/>
+                        <input name='productDetail' onChange={formik.handleChange} required/>
                     </div>
                     <div>
                         <label>Precio :</label>
-                        <input name='productPrice' onChange={formik.handleChange} />
+                        <input name='productPrice' onChange={formik.handleChange} required />
                     </div>
                 </div>
                 <hr/>
